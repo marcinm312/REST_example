@@ -1,4 +1,4 @@
-# REST_example
+# Przykład usługi REST w języku Python oraz testy zaimplementowanej usługi
 
 W pliku books.json znajdują się dane, używane w zaimplementowanej usłudze sieciowej REST.
 
