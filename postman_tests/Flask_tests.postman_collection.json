@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "da5942cf-638f-4e5d-a4a1-c100df5634eb",
 		"name": "Flask_tests",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7374578"
 	},
 	"item": [
 		{
@@ -11,7 +12,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "83be0343-684f-42e5-9771-9b923bec044d",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);",
 							"tests[\"test\"] = jsonData.length === 8;"
@@ -43,7 +43,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e9baba0a-1c3a-401b-82d9-aa71627dc819",
 						"exec": [
 							"pm.test(\"czy książka 9781593275846 jest na liście\", function() {",
 							"    pm.expect(pm.response.text()).to.include(\"9781593275846\");",
@@ -76,7 +75,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "11d2e5d9-3245-42a8-990c-debc24c82be5",
 						"exec": [
 							"pm.test(\"Jest książka\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -110,7 +108,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8dc156d1-b127-42a1-87b8-8e9a51917bcd",
 						"exec": [
 							"pm.test(\"Nie ma książki\", function () {\r",
 							"    pm.response.to.have.status(404);\r",
@@ -144,7 +141,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8dc156d1-b127-42a1-87b8-8e9a51917bcd",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);",
 							"tests[\"czy zwracana jest lista o poprawnej długości\"] = jsonData.length === 4;"
@@ -177,7 +173,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/book/9781593275846?title=ooooo",
+					"raw": "http://localhost:5000/book/9781491904244?title=ooooo",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -185,7 +181,7 @@
 					"port": "5000",
 					"path": [
 						"book",
-						"9781593275846"
+						"9781491904244"
 					],
 					"query": [
 						{
@@ -203,7 +199,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4e74bb4b-2c88-4580-a38b-16a25211f0f0",
 						"exec": [
 							"var response = JSON.parse(responseBody);\r",
 							"tests[\"Tytul został zmieniony\"] = response.title == \"ooooo\";"
@@ -216,7 +211,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/book/9781449337711",
+					"raw": "http://localhost:5000/book/9781491904244",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -224,7 +219,7 @@
 					"port": "5000",
 					"path": [
 						"book",
-						"9781449337711"
+						"9781491904244"
 					]
 				}
 			},
