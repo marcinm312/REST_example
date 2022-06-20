@@ -143,7 +143,7 @@
 					"script": {
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);",
-							"tests[\"czy zwracana jest lista o poprawnej długości\"] = jsonData.length === 4;"
+							"tests[\"czy zwracana jest lista o poprawnej długości\"] = jsonData.length === 5;"
 						],
 						"type": "text/javascript"
 					}
